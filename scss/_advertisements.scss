@@ -1,0 +1,78 @@
+.ad-disclaimer
+{
+	color: lightgrey;
+	font-size: 12px;
+	height: 12px;
+	margin: 0px;
+	text-align: center;
+	text-transform: uppercase;
+	width: 100%;
+}
+
+.ad-container-banner-top
+{
+	border-bottom: 1px solid lightgrey;
+	margin: auto;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	max-width: 1280px;
+	//overflow-x: auto;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	text-align: center;
+	width: 90%;
+}
+
+/*.ad-container-banner-inline
+{
+	border-bottom: 1px solid lightgrey;
+	border-top: 1px solid lightgrey;
+	margin: auto;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	max-width: 1280px;
+	overflow-x: auto;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	text-align: center;
+	width: 100%;
+}*/
+
+.ad-container-banner-bottom
+{
+	border-top: 1px solid lightgrey;
+	margin: auto;
+	margin-top: 20px;
+	max-width: 1280px;
+	//overflow-x: auto;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	text-align: center;
+	width: 90%;
+}
+
+.ad-container-medium-rectangle
+{
+	margin: auto;
+	width: 300px;
+}
+
+.ad-container-sponsor-frontpage
+{
+	border: 1px solid green;
+	margin: 10px;
+	padding-left: 15px;
+	
+	@media screen and (max-width: $screen-target-min)
+	{
+		height: 100%;
+		margin: 0px;
+		margin-bottom: 10px;
+		padding-right: 15px;
+	
+		img
+		{
+			display: none;
+		}
+	}
+}

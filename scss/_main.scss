@@ -1,0 +1,51 @@
+/*
+
+## Triangle X CSS Framework ##
+
+Everything is piped though this file before being compiled 
+down. Please be sure to break any styles that don't belong 
+in these files into seperate documents to keep the SCSS 
+files as conciese and focused as possible.
+
+*/
+
+// External stylesheets
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab);
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display);
+@import url(https://fonts.googleapis.com/css?family=Crimson+Text);
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+
+// The following must be included in the correct order
+@import "definitions.scss";
+@import "mixins.scss";
+
+// Layout
+@import "default-tags.scss";
+@import "generic.scss";
+@import "text.scss";
+
+// Components
+@import "cover.scss";
+@import "navigation.scss";
+@import "header.scss";
+@import "footer.scss";
+@import "card.scss";
+@import "search.scss";
+@import "sidebar.scss";
+@import "image.scss";
+@import "button.scss";
+@import "page.scss";
+@import "profile.scss";
+@import "advertisements.scss";
+@import "highlights.scss";
+@import "directory.scss";
+@import "widgets.scss";
+
+// Template styles
+@import "category.scss";
+@import "single.scss";
+
+// Special Layout
+@import "contact.scss";
+@import "e404.scss"

@@ -1,0 +1,13 @@
+.btn-primary
+{
+	background-color: $triangle-color-blue;
+	border-color: $triangle-color-blue;
+	color: white;
+	font-weight: bold;
+	
+	&:hover
+	{
+		background-color: $triangle-color-light;
+		border-color: $triangle-color-light;
+	}
+}

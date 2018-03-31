@@ -1,0 +1,137 @@
+.single-title
+{
+	h1
+	{
+		font-family: $triangle-font-headline;
+		font-size: 42px;
+		font-style: italic;
+	}
+	
+	h2
+	{
+		color: grey;
+		font-family: $triangle-font-headline;
+		font-size: 20px;
+		margin-top: -30px;
+	}
+}
+
+.single-meta
+{
+	border-bottom: 1px solid lightgrey;
+	border-top: 1px solid lightgrey;
+	min-height: 50px;
+	margin-bottom: 25px;
+	
+	.author
+	{
+		display: inline-block;
+		font-family: $triangle-font-main;
+		font-size: 12px;
+		height: 50px;
+		line-height: 50px;
+		
+		a
+		{
+			color: black;
+			font-weight: bold;
+			text-decoration: none;
+		}
+	}
+	
+	.date
+	{
+		display: inline-block;
+		font-family: $triangle-font-main;
+		font-size: 12px;
+		height: 50px;
+		line-height: 50px;
+		padding-left: 15px;
+	}
+}
+
+.single-content
+{
+	overflow: hidden;
+	width: 100%;
+	
+	p,
+	ol,
+	ul
+	{
+		font-family: $triangle-font-copy;
+		font-size: 20px;
+		margin: auto;
+		max-width: 708px;
+		padding-bottom: 20px;
+		width: 100%;
+	}
+	
+	li
+	{
+		padding-bottom: 10px;
+		
+		span
+		{
+			padding-left: 5px;
+		}
+	}
+	
+	p
+	{
+		img
+		{
+			height: auto;
+			margin-left: 0px;
+			margin-right: 0px;
+			margin-bottom: 15px;
+			width: 100% !important;
+		}
+	}
+	
+	figure
+	{
+		margin-bottom: 15px;
+		margin-left: 0px;
+		margin-right: 0px;
+		margin-top: 0px;
+		width: 100% !important; // Must be !important to override WordPress sizing
+		
+		img
+		{
+			height: auto;
+			max-width: 100%;
+			width: 100%;
+		}
+		
+		figcaption
+		{
+			color: grey;
+			font-size: 16px;
+			font-style: italic;
+			margin-top: -5px
+		}
+	}
+}
+
+.single-comments
+{
+	margin: auto;
+	max-width: 800px;
+	overflow: hidden;
+	width: 90%;
+}
+
+@media screen and (max-width: $screen-target-min)
+{
+	.single-title
+	{
+		h1 { font-size: 28px; }
+		h2 { font-size: 15px; }
+	}
+	
+	.single-meta
+	{
+		.date { float: right; }
+	}
+}

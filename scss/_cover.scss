@@ -1,0 +1,80 @@
+.cover
+{
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	height: 100vh;
+	min-height: 950px;
+	text-align: center;
+	width: 100%;
+}
+
+.cover-repeat
+{
+	background-position: center;
+    background-repeat: repeat;
+    background-size: auto;	
+	text-align: center;
+	width: 100%;
+}
+
+.cover-half
+{
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	height: 50vh;
+	text-align: center;
+	width: 100%;
+}
+
+.cover-quarter
+{
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	height: 25vh;
+	text-align: center;
+	width: 100%;
+}
+
+.cover-overlay
+{
+	align-items: center;
+	animation: fadein 2s;
+	display: flex;
+	//padding-top: 20vh;
+}
+
+.cover-heading
+{
+	color: white;
+	display: inline-block;
+	font-size: 4.50rem;
+	font-weight: 700;
+	line-height: 5rem;
+	margin: 0 auto 1rem;
+	text-align: center;
+	width: 100%;
+}
+	
+.cover-caption
+{
+	color: white;
+	display: inline-block;
+	font-size: 18px;
+	text-align: center;
+	width: 100%;
+	
+	span
+	{
+		display: inline-block;
+		width: 100%;
+	}
+}
+
+@keyframes fadein
+{
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}

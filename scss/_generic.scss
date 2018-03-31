@@ -1,0 +1,67 @@
+.generic-wrapper
+{
+	height: 100%;
+	margin-top: 55px;
+	width: 100%;
+}
+
+.generic-container
+{
+	margin: auto;
+	margin-bottom: 50px;
+	//max-width: 1280px;
+	max-width: 960px;
+	width: 90%;
+}
+
+.generic-flex-container
+{
+	@include display-flex();
+	margin: auto;
+	margin-bottom: 50px;
+	max-width: 1280px;
+	min-width: 0;
+	overflow: hidden;
+	width: 90%;
+	
+	.flex-main
+	{
+		@include flex(1 0);
+		min-width: 0;
+		padding-right: 20px;
+		overflow: hidden;
+	}
+	
+	.flex-sidebar
+	{
+		border-left: 1px solid lightgrey;
+		@include flex(0 0 300px);
+		padding-left: 20px;
+	}
+	
+	@media screen and (max-width: $screen-target-min)
+	{
+		@include flex-direction(column);
+		@include flex-wrap(wrap);
+		overflow: hidden;
+		padding: 0px;
+		width: 100%;
+		
+		.flex-main
+		{
+			@include box-sizing(border-box);
+			overflow: hidden;
+			padding: 10px;
+			width: 100%;
+		}
+		
+		.flex-sidebar
+		{
+			@include box-sizing(border-box);
+			border: none;
+			display: inline-block;
+			padding: 10px;
+			width: 100%;
+		}
+	}
+}

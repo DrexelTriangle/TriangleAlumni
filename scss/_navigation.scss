@@ -1,0 +1,106 @@
+.navbar-toolbar
+{
+	background-color: #eee;
+	height: 30px;
+	padding: 0px;
+	
+	.nav-item
+	{
+	}
+	
+	.nav-link
+	{
+		color: black;
+		font-family: $triangle-font-main;
+		font-size: 12px;
+		
+		&:hover
+		{
+			color: $triangle-color-blue;
+		}
+	}
+}
+
+// .navbar-main can be used in place of Bootstrap .navbar-light or .navbar-dark. The nested styles will overwrite defaults
+.navbar-main
+{
+	background-color: white;
+	padding: 0px;
+	
+	.navbar-toggler
+	{
+		color: black;
+	}
+	
+	.navbar-toggler-icon
+	{
+		background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+	}
+	
+	.navbar-brand
+	{
+		padding-bottom: 9px;
+		padding-left: 10px;
+		padding-top: 8px;
+		
+		img
+		{
+			line-height: inherit;
+			max-height: 30px;
+		}
+	}
+	
+	.navbar-nav
+	{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	
+	.nav-item
+	{
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
+	
+		&:after
+		{
+			//background: #00a8e1;
+			background: $triangle-color-blue;
+			content: '';
+			display: block;
+			height: 3px;
+			transform: scaleX(0);
+			transition: transform 0.2s ease-in-out;
+			width: 100%;
+		}
+		
+		&:hover::after
+		{
+			transform: scaleX(1);
+		}
+	}
+	
+	.nav-link
+	{
+		color: black;
+		font-family: $triangle-font-main;
+		font-size: 14px;
+		
+		&:hover
+		{
+			color: black;
+		}
+	}
+	
+	.dropdown-item
+	{
+		color: black;
+		font-family: $triangle-font-main;
+		font-size: 14px;
+		
+		&:focus
+		{
+			background-color: $triangle-color-blue;
+			color: white;
+		}
+	}
+}

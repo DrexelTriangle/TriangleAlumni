@@ -1,0 +1,63 @@
+.directory-list
+{
+	list-style: none;
+	padding-left: 0px;
+}
+
+.directory-card
+{
+	border: 1px solid lightgrey;
+	border-radius: 5px;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+	margin-bottom: 15px;
+	margin-top: 15px;
+	padding: 10px;
+	position: relative;
+	transition: all 0.1s ease-in-out;
+	width: 100%;
+	
+	&:hover
+	{
+		box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16),0 0 0 1px rgba(0,0,0,0.04);
+		transition: all 0.1s ease-in-out;
+	}
+	
+	&:hover .directory-name
+	{
+		color: #00a8e1;
+	}
+	
+	@media screen and (max-width: $screen-target-min)
+	{
+		text-align: center;
+	}
+}
+
+.directory-avatar
+{
+	display: inline-block;
+	height: 100%;
+	padding-right: 10px;
+
+	img
+	{
+		border-radius: 50%;
+	}
+}
+
+.directory-biographics
+{
+	display: inline-block;
+}
+
+.directory-name
+{
+	color: black;
+	font-size: 24px;
+	padding-top: 5px;
+	
+	&:focus
+	{
+		outline: none;
+	}
+}

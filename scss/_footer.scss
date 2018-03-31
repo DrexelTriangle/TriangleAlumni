@@ -1,0 +1,104 @@
+.footer-wrapper
+{
+	border-top: 2px solid white;
+	background-color: $triangle-color-blue;
+	color: white;
+	width: 100%;
+}
+
+.footer-container
+{
+	height: 100%;
+	margin: auto;
+	max-width: 1280px;
+	width: 90%;
+}
+
+.footer-branding
+{
+	display: flex;
+	height: 50px;
+	width: 100%;
+}
+
+.footer-logo
+{
+	display: flex;
+	flex-direction: column;
+	height: 50px;
+	justify-content: center;
+	
+	img
+	{
+		height: 26px;
+	}
+}
+
+.footer-tagline
+{
+	font-family: $triangle-font-logo;
+	font-size: 14px;
+	line-height: 50px;
+	text-align: right;
+}
+
+.navbar-footer
+{
+	height: 100%;
+	margin-bottom: 25px;
+	margin-top: 25px;
+
+	.navbar-nav
+	{
+		border-right: 1px solid white;
+		padding-left: 25px;
+		padding-right: 25px;
+		width: 33%;
+		
+		&:last-child
+		{
+			border-right: none;
+		}
+	}
+	
+	.nav-heading
+	{
+		font-size: 14px;
+		font-weight: bold;
+		padding-left: 5px;
+	}
+	
+	.nav-item
+	{
+		border-radius: 5px;
+		padding-left: 5px;
+		transition: 0.05s ease-in-out;
+	
+		&:hover
+		{
+			background-color: white;
+			transition: 0.05s ease-in-out;
+		}
+	}
+	
+	.nav-link
+	{
+		color: white;
+		font-size: 12px;
+		transition: 0.05s ease-in-out;
+		
+		&:hover
+		{
+			color: black;
+			transition: 0.05s ease-in-out;
+		}
+	}
+}
+
+.footer-disclaimers
+{
+	font-size: 12px;
+	padding-top: 15px;
+	text-align: right;
+	width: 100%;
+}
