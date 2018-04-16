@@ -1,0 +1,122 @@
+.news-grid
+{
+	margin: auto;
+	max-width: 1140px;
+	overflow: hidden;
+	width: 100%;
+}
+
+.news-carousel
+{
+	margin-bottom: 35px;
+
+	.image-container
+	{
+		background-color: lightgrey;
+		height: 40vh;
+		overflow: hidden;
+		
+		img
+		{
+			height: auto;
+			width: 100%;
+		}
+	}
+	
+	.meta-container
+	{
+		background: linear-gradient(90deg, $triangle-blue-t1, $triangle-blue-t2);
+		color: white;
+		height: 40vh;
+		padding: 35px;
+		
+		p
+		{
+			padding-top: 25px;
+		}
+	}
+}
+
+.news-splash
+{
+	text-align: center;
+	width: 100%;
+	
+	h1
+	{
+		color: rgb(0, 155, 217);
+		font-family: $triangle-font-main;
+		font-size: 36px;
+		margin-bottom: 35px;
+	}
+}
+
+.news-card
+{
+	height: 100%;
+	transition: all 0.1s ease-in-out;
+	
+	.content-container
+	{
+		background-color: $triangle-gray-10;
+		margin-bottom: 30px;
+		padding-bottom: 25px;
+	}
+	
+	&:hover
+	{
+		transition: all 0.1s ease-in-out;
+	}
+	
+	a
+	{
+		text-decoration: none;
+		outline: none;
+	}
+	
+	.image-container
+	{
+		overflow: hidden;
+		padding-bottom: 25px;
+	
+		img
+		{
+			height: auto;
+			width: 100%;
+		}
+	}
+	
+	.meta
+	{
+		color: black;
+		font-size: 14px;
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+	
+	&:hover .headline
+	{
+		color: $triangle-blue-t2;
+	}
+	
+	.headline
+	{
+		color: black;
+		font-size: 24px;
+		padding-left: 25px;
+		padding-right: 25px;
+		
+		&:hover
+		{
+			text-decoration: underline;
+		}
+	}
+	
+	.buttons
+	{
+		padding-left: 25px;
+		padding-right: 25px;
+		padding-top: 15px;
+		text-align: right;
+	}
+}

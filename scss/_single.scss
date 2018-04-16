@@ -1,19 +1,26 @@
+.single-container
+{
+	margin: auto;
+	max-width: 1200px;
+	width: 100%;
+}
+
+.single-jumbotron
+{
+	max-height: 460px;
+	overflow: hidden;
+	width: 100%;
+	
+	img
+	{
+		height: auto;
+		width: 100%;
+	}
+}
+
 .single-title
 {
-	h1
-	{
-		font-family: $triangle-font-headline;
-		font-size: 42px;
-		font-style: italic;
-	}
-	
-	h2
-	{
-		color: grey;
-		font-family: $triangle-font-headline;
-		font-size: 20px;
-		margin-top: -30px;
-	}
+	font-size: 42px;
 }
 
 .single-meta
@@ -52,7 +59,12 @@
 
 .single-content
 {
+	background: white;
+	margin: auto;
+	margin-bottom: 25px;
+	max-width: 780px;
 	overflow: hidden;
+	padding: 25px;
 	width: 100%;
 	
 	p,
@@ -61,8 +73,6 @@
 	{
 		font-family: $triangle-font-copy;
 		font-size: 20px;
-		margin: auto;
-		max-width: 708px;
 		padding-bottom: 20px;
 		width: 100%;
 	}
@@ -112,14 +122,6 @@
 			margin-top: -5px
 		}
 	}
-}
-
-.single-comments
-{
-	margin: auto;
-	max-width: 800px;
-	overflow: hidden;
-	width: 90%;
 }
 
 @media screen and (max-width: $screen-target-min)

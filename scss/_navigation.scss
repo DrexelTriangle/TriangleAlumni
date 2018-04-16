@@ -1,6 +1,7 @@
 .navbar-toolbar
 {
-	background-color: #eee;
+	background-color: $triangle-blue;
+	color: white;
 	height: 30px;
 	padding: 0px;
 	
@@ -10,13 +11,13 @@
 	
 	.nav-link
 	{
-		color: black;
+		color: white;
 		font-family: $triangle-font-main;
 		font-size: 12px;
 		
 		&:hover
 		{
-			color: $triangle-color-blue;
+			color: $triangle-blue-t2;
 		}
 	}
 }
@@ -25,6 +26,7 @@
 .navbar-main
 {
 	background-color: white;
+	box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.125);
 	padding: 0px;
 	
 	.navbar-toggler
@@ -64,7 +66,7 @@
 		&:after
 		{
 			//background: #00a8e1;
-			background: $triangle-color-blue;
+			background: $triangle-blue;
 			content: '';
 			display: block;
 			height: 3px;
@@ -99,7 +101,7 @@
 		
 		&:focus
 		{
-			background-color: $triangle-color-blue;
+			background-color: $triangle-blue;
 			color: white;
 		}
 	}

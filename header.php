@@ -49,7 +49,7 @@
 							$id = bp_loggedin_user_id();
 							
 							printf('<li class="nav-item">');
-							printf('<a class="nav-link" href="/members/%1$s">Howdy, %2$s</a>', bp_core_get_username($id), bp_core_get_user_displayname($id));
+							printf('<a class="nav-link" href="/members/%1$s">Hi, %2$s</a>', bp_core_get_username($id), bp_core_get_user_displayname($id));
 							printf('</li>');
 							
 							printf('<li class="nav-item">');
@@ -103,8 +103,8 @@
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="dropdown-members" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Get Involved</a>
 						<div class="dropdown-menu" aria-labelledby="dropdown-members">
-							<a href="/join" class="dropdown-item">Alumni Association</a>
-							<a href="/back-issues" class="dropdown-item">Donate Back-Issues</a>
+							<a href="/join" class="dropdown-item">Join the Association</a>
+							<a href="/volunteer" class="dropdown-item">Volunteer</a>
 						</div>
 					</li>
 					<li class="nav-item">

@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package Triangle_X
+ * @package Alumni
  */
 
 if ( ! function_exists( 'triangle_x_posted_on' ) ) :

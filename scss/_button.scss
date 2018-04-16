@@ -1,13 +1,52 @@
 .btn-primary
 {
-	background-color: $triangle-color-blue;
-	border-color: $triangle-color-blue;
+	background-color: $triangle-blue;
+	border-color: $triangle-blue;
 	color: white;
 	font-weight: bold;
+	outline: none;
 	
 	&:hover
 	{
-		background-color: $triangle-color-light;
-		border-color: $triangle-color-light;
+		background-color: $triangle-blue-t1;
+		border-color: $triangle-blue-t1;
+	}
+}
+
+.btn-read
+{
+	background-color: transparent;
+	border-radius: 0px;
+	font-weight: 400;
+	line-height: 40px;
+	padding-bottom: 3px;
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-top: 3px;
+	
+	&.white
+	{
+		color: white;
+		border: 2px solid rgba(255, 255, 255, 0.3);;
+		
+		&:hover
+		{
+			background-color: transparent;
+			border-color: white;
+			color: white;
+		}
+	}
+	
+	&.black
+	{
+		border: 2px solid rgb(203, 203, 203);
+		color: black;
+		
+		&:hover
+		{
+			background-color: transparent;
+			border-color: black;
+			color: black;
+		}
 	}
 }

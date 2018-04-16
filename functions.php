@@ -47,10 +47,9 @@ if (!function_exists('alumni_setup'))
 		add_theme_support('post-thumbnails');
 		add_image_size('standard-monitor', 1280, 960, true);
 		add_image_size('hd-video', 1280, 720, true);
-		add_image_size('feature-jumbotron', 1480, 560, true);
+		add_image_size('feature-jumbotron', 1200, 460, true);
 		add_image_size('169-preview-large', 1600, 900, true);
-		add_image_size('169-preview-medium', 800, 450, true);
-		add_image_size('169-preview-small', 400, 225, true);
+		add_image_size('169-preview-small', 445, 250, true);
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(array(
@@ -145,6 +144,9 @@ require get_template_directory() . '/inc/buddypress.php';
 
 // BuddyPress configuration file
 require get_template_directory() . '/inc/buddypress-config.php';
+
+// Custom comment callback
+require get_template_directory() . '/inc/comment.php';
 
 
 

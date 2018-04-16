@@ -11,8 +11,10 @@
 
 get_header(); ?>
 
-<div class="cover-quarter" style="background-image: url(<?php echo get_template_directory_uri() . '/images/covers/events.jpg'; ?>)">
-	Member Directory
+<div class="cover cover-quarter" style="background-image: url(<?php echo get_template_directory_uri() . '/images/covers/events.jpg'; ?>)">
+	<div class="cover-overlay">
+		<h1 class="cover-heading">Member Directory</h1>
+	</div>
 </div>
 
 <div class="generic-container">
@@ -49,23 +51,12 @@ get_header(); ?>
 			<?php bp_members_pagination_links(); ?>
 		</div>
 	</div>
-	
-	<!--<form action="<php echo bp_search_form_action() ?>" method="post" id="member-search">
-		<label for="search-terms" class="accessibly-hidden"><php _e('Search for:', 'commentpress-core'); ?></label>
-		<input type="text" id="search-terms" name="search-terms" value="<php echo isset($_REQUEST['s']) ? esc_attr($_REQUEST['s']) : ""; ?>" />
-
-		<php echo bp_search_form_type_select() ?>
-
-		<input type="submit" name="search-submit" id="search-submit" value="<php _e('Search', 'commentpress-core') ?>" />
-
-		<php wp_nonce_field('bp_search_form') ?>
-	</form>-->
 	 
 	<?php do_action( 'bp_before_directory_members_list' ); ?>
 	 
 	<ul class="directory-list" role="main">
 
-		<?php while ( bp_members() ) : bp_the_member(); ?>
+		<?php while (bp_members() ) : bp_the_member(); ?>
 		
 		<li class="directory-card">
 			<div class="directory-avatar">
@@ -101,7 +92,7 @@ get_header(); ?>
 			</div>
 	 
 			<div class="action"> 
-				<?php do_action( 'bp_directory_members_actions' ); ?> 
+				<?php //do_action('bp_directory_members_actions'); ?> 
 			</div>
 	 
 			<div class="clear"></div>
@@ -111,7 +102,7 @@ get_header(); ?>
 	 
 	</ul>
 	 
-	<?php do_action( 'bp_after_directory_members_list' ); ?>
+	<?php do_action('bp_after_directory_members_list'); ?>
 	 
 	<?php bp_member_hidden_fields(); ?>
 	 

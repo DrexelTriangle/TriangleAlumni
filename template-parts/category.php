@@ -11,122 +11,117 @@ $cat = get_queried_object();
  
 ?>
 
-<?php insert_ad('Global Banner Top', 'banner-top'); ?>
-
-<div class="category-title">
-	<h1 class="text-title-large"><?php single_cat_title('', true); ?></h1>
-</div>
-
-<div id="section-highlights" class="generic-container">	
-	<?php $highlights = new WP_Query(array('posts_per_page' => 4, 'offset' => 0, 'cat' => $cat->term_id)); ?>
-
-	<div class="highlights-container">
-		<div class="highlights-left">
-			<div class="story">
-				<?php
-					$highlights->the_post();
-					$link = get_permalink();
-					$timeSincePost = human_time_diff(get_post_time('U', true), current_time('timestamp'));
-					
-					printf('<a href="%1$s"><div class="highlights-thumbnail-desktop">%2$s</div></a>', $link, get_the_post_thumbnail());
-					printf('<a href="%1$s"><div class="highlights-thumbnail-mobile">%2$s</div></a>', $link, get_the_post_thumbnail(null, array('class' => '169-preview-medium')));
-					printf('<a class="text-headline-medium" href="%1$s">%2$s</a>', $link, get_the_title());
-					printf('<div class="category-tease">%1$s</div>', get_the_summary($post->ID));
-					printf('<div class="category-author">%1$s ago • By %2$s</div>', $timeSincePost, coauthors_posts_links(null, null, null, null, false));
-				?>
-			</div>
-		</div>
+<div id="newsCarousel" class="carousel slide news-carousel" data-ride="carousel">
+	<ol class="carousel-indicators">
+		<li data-target="#newsCarousel" data-slide-to="0" class="active"></li>
+		<li data-target="#newsCarousel" data-slide-to="1"></li>
+		<li data-target="#newsCarousel" data-slide-to="2"></li>
+	</ol>
+	<div class="carousel-inner">
+		<?php $query = new WP_Query(array('posts_per_page' => 3, 'offset' => 0, 'cat' => $cat->term_id)); ?>
 		
-		<div class="highlights-center">
-			<div class="story">
-				<?php
-					$highlights->the_post();
-					$link = get_permalink();
-					$timeSincePost = human_time_diff(get_post_time('U', true), current_time('timestamp'));
-					
-					printf('<a href="%1$s"><div class="highlights-thumbnail-desktop">%2$s</div></a>', $link, get_the_post_thumbnail());
-					printf('<a href="%1$s"><div class="highlights-thumbnail-mobile">%2$s</div></a>', $link, get_the_post_thumbnail(null, array('class' => '169-preview-medium')));
-					printf('<a class="text-headline-medium" href="%1$s">%2$s</a>', $link, get_the_title());
-					printf('<div class="category-tease">%1$s</div>', get_the_summary($post->ID));
-					printf('<div class="category-author">%1$s ago • By %2$s</div>', $timeSincePost, coauthors_posts_links(null, null, null, null, false));
-				?>
-			</div>
-		</div>
-		
-		<div class="highlights-right">
-			<div class="story">
-				<div class="highlights-right-top">
-					<?php
-						$highlights->the_post();
-						$link = get_permalink();
-						$timeSincePost = human_time_diff(get_post_time('U', true), current_time('timestamp'));
-						
-						printf('<a href="%1$s"><div class="highlights-thumbnail-mobile">%2$s</div></a>', $link, get_the_post_thumbnail(null, array('class' => '169-preview-medium')));
-						printf('<a class="text-headline-medium" href="%1$s">%2$s</a>', $link, get_the_title());
-						printf('<div class="category-tease"><a href="%3$s"><div class="highlights-thumbnail-desktop">%1$s</div></a> %2$s</div>', get_the_post_thumbnail(null, array('class' => '169-preview-medium')), get_the_summary($post->ID), $link);
-						printf('<div class="category-author">%1$s ago • By %2$s</div>', $timeSincePost, coauthors_posts_links(null, null, null, null, false));
-					?>
-				</div>
-				
-				<div class="highlights-right-bottom">
-					<?php
-						$highlights->the_post();
-						$link = get_permalink();
-						$timeSincePost = human_time_diff(get_post_time('U', true), current_time('timestamp'));
-						
-						printf('<a href="%1$s"><div class="highlights-thumbnail-mobile">%2$s</div></a>', $link, get_the_post_thumbnail(null, array('class' => '169-preview-medium')));
-						printf('<a class="text-headline-medium" href="%1$s">%2$s</a>', $link, get_the_title());
-						printf('<div class="category-tease"><a href="%3$s"><div class="highlights-thumbnail-desktop">%1$s</div></a> %2$s</div>', get_the_post_thumbnail(null, array('class' => '169-preview-medium')), get_the_summary($post->ID), $link);
-						printf('<div class="category-author">%1$s ago • By %2$s</div>', $timeSincePost, coauthors_posts_links(null, null, null, null, false));
-					?>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>	
-
-<div class="generic-flex-container">
-	<main id="section-articles" class="flex-main">
-		<?php			
-			$query = new WP_Query(array('posts_per_page' => 15, 'offset' => 4, 'cat' => $cat->term_id));
-			
-			while($query->have_posts())
-			{
+		<?php 
+				$i = 0;
+				while($query->have_posts()) :
 				$query->the_post();
 				
 				$title = get_the_title();
 				$link = get_permalink();
-				$date = get_the_date('M. j, Y');
-				$authors = coauthors_posts_links(null, null, null, null, false);
-				$excerpt = get_the_summary($post->ID);
-				$thumb = get_the_post_thumbnail($post, array('class' => '169-preview-medium'));
+				$excerpt = get_the_excerpt();
+				$thumb = get_the_post_thumbnail($post, '169-preview-large');
 				
-				echo '<div class="category-post">';
-				
-				// Left box - date
-				printf('<div class="category-date">%1$s</div>', esc_attr($date));
-				
-				// Middle box flex - headline, author, and excerpt
-				echo '<div class="category-post-info">';
-				printf('<a class="text-headline-medium" href="%1$s">%2$s</a>', esc_attr($link), esc_html($title));
-				printf('<div class="category-tease">%1$s</div>', $excerpt);
-				printf('<div class="category-author">By %1$s</div>', $authors);
-				echo '</div>';
-				
-				// Right box - thumbnail
-				printf('<a href="%1$s"><div class="category-thumbnail">%2$s</div></a>', $link, $thumb);
-				
-				echo '</div>';
-			}
+				// If first story, add active class
+				if ($i == 0)
+				{
+					printf('<div class="carousel-item active">');
+					$i++;
+				}
+				else
+				{
+					printf('<div class="carousel-item">');
+				}
+			?>
 			
-			// Allow infinite scroll using Ajax Load More plugin
-			echo do_shortcode("[ajax_load_more post_type='post, snowball' repeater='default' offset='19' posts_per_page='15' transition='fade' category='" . $cat->slug . "']");
-		?>
-	</main>
-
-	<aside class="flex-sidebar">			
-		<!-- todo - load sidebar here -->
-	</aside>
+				<div class="d-block w-100">
+					<div class="row no-gutters">
+						<div class="col-lg-6 image-container">
+							<?php echo $thumb ?>
+						</div>
+						<div class="col-lg-6 meta-container">
+							<h1><?php echo $title ?></h1>
+							<p><?php echo $excerpt ?></p>
+							<a class="btn btn-primary btn-read white" href="<?php echo $link ?>">Read More</a>
+						</div>
+					</div>
+				</div>
+				
+			</div>			
+		<?php endwhile; ?>
+	</div>
+	
+	<a class="carousel-control-prev" href="#newsCarousel" role="button" data-slide="prev">
+		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		<span class="sr-only">Previous</span>
+	</a>
+	
+	<a class="carousel-control-next" href="#newsCarousel" role="button" data-slide="next">
+		<span class="carousel-control-next-icon" aria-hidden="true"></span>
+		<span class="sr-only">Next</span>
+	</a>
 </div>
 
-<?php insert_ad('Global Banner Bottom', 'banner-bottom'); ?>
+<div class="news-splash">
+	<h1>Media, alumni updates, and more</h1>
+</div>
+
+<div class="news-grid">
+	<?php			
+		$query = new WP_Query(array('posts_per_page' => 15, 'offset' => 0, 'cat' => $cat->term_id));
+		
+		// For counting stories to put rows
+		$i = 1;
+		
+		// First row div
+		printf('<div class="row">');
+		
+		while($query->have_posts())
+		{
+			$query->the_post();
+			
+			$title = get_the_title();
+			$link = get_permalink();
+			$date = get_the_date('M. j, Y');
+			$author = get_the_author();
+			$thumb = get_the_post_thumbnail($post, '169-preview-large');
+			
+			// Story container
+			printf('<div class="news-card col-md-4"><div class="content-container"><a href="%1$s">', $link);
+			
+			// Thumbnail
+			printf('<div class="image-container">');
+			printf($thumb);
+			printf('</div>');
+			
+			// Date author, and sub-category
+			printf('<div class="meta">%1$s | By %2$s</div>', esc_attr($date), $author);
+			
+			// Headline
+			printf('<div class="headline" href="%1$s">%2$s</div>', esc_attr($link), esc_html($title));
+			
+			// 'Read' button
+			printf('<div class="buttons"><a class="btn btn-primary btn-read black" href="%1$s">Read More</a></div>', $link);
+			
+			printf('</a></div></div>');
+			
+			// Print a new row div every 3 stories
+			if($i % 3 == 0)
+				printf('</div><div class="row">');
+		}
+		
+		// Close last row div
+		printf('</div>');
+		
+		// Allow infinite scroll using Ajax Load More plugin
+		//echo do_shortcode("[ajax_load_more post_type='post' repeater='default' offset='19' posts_per_page='15' transition='fade' category='" . $cat->slug . "']");
+	?>
+</div>

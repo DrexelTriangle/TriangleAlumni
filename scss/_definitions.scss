@@ -16,11 +16,28 @@ $triangle-font-image: 'Montserrat', sans-serif;
 //
 //--------------------------------------------------------------------------------
 
-/* Main Triangle color used in header, footer, and other colored elements */
+/* (Legacy, use $triangle-blue) Main Triangle color used in header, footer, and other colored elements */
 $triangle-color-blue: #07294D;
 
-/* Blue color for hovering over elements */
-$triangle-color-light: #0a3d72;
+/* Triangle Blue colors as defined in the style guide */
+$triangle-blue: $triangle-color-blue;
+$triangle-blue-t1: #165A97;
+$triangle-blue-t2: #3F9CCC;
+$triangle-blue-t3: #6AAED4;
+$triangle-blue-t4: #DCF1FB;
+
+/* Triangle Black/Gray colors as defined in the style guide */
+$triangle-black: #2B2E34;
+$triangle-gray-50: #9A9B9F;
+$triangle-gray-30: #C4C4C6;
+$triangle-gray-10: #EBECEC;
+$triangle-white: white;
+
+/* Triangle Gold colors as defined in the style guide */
+$triangle-gold: #E4AE2A;
+$triangle-gold-t1: #FFD53B;
+$triangle-gold-t2: #FFE78C;
+
 
 //--------------------------------------------------------------------------------
 //
