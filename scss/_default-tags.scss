@@ -10,3 +10,13 @@ body
 	margin: 0px;
 	//font-family: $triangle-font-copy;
 }
+
+a
+{
+	color: $triangle-blue-t1;
+	
+	&:hover
+	{
+		color: $triangle-blue-t2;
+	}
+}

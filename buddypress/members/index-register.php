@@ -16,7 +16,7 @@ get_header(); ?>
 	<div class="card card-form col-xs-12 col-md-5">
 		<div class="card-block">
 			<h1>Alumni Registration</h1>
-			<?php get_template_part('template-parts/registration-form'); ?>
+			<?php get_template_part('buddypress/members/registration-form'); ?>
 		</div>
 	</div>
 	&nbsp;

@@ -15,7 +15,8 @@
  * the visitor has not yet entered the password we will
  * return early without loading the comments.
  */
-if ( post_password_required() ) {
+if (post_password_required())
+{
 	return;
 }
 ?>
@@ -41,15 +42,19 @@ if ( post_password_required() ) {
 					<div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'alumni' ) ); ?></div>
 					<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'alumni' ) ); ?></div>
 
-				</div><!-- .nav-links -->
-			</nav><!-- #comment-nav-above -->
+				</div>
+			</nav>
 		<?php endif; // Check for comment navigation. ?>
 
-		<ol class="comment-list">
+		<div class="comment-list">
 			<?php
-				wp_list_comments('type=comment&callback=alumni_comment');
+				wp_list_comments(array(
+									'callback' => 'alumni_comment',
+									'reverse_top_level' => true,
+									'type' => 'all',
+								));
 			?>
-		</ol><!-- .comment-list -->
+		</div>
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
 			<nav id="comment-nav-below" class="navigation comment-navigation" role="navigation">
@@ -59,8 +64,8 @@ if ( post_password_required() ) {
 					<div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'alumni' ) ); ?></div>
 					<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'alumni' ) ); ?></div>
 
-				</div><!-- .nav-links -->
-			</nav><!-- #comment-nav-below -->
+				</div>
+			</nav>
 		<?php endif; // Check for comment navigation. ?>
 
 	<?php endif; // Check for have_comments(). ?>

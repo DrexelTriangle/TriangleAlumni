@@ -30,13 +30,13 @@
 						<a class="nav-link">Network:</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="https://thetriangle.org">The Triangle</a>
+						<a class="nav-link" href="https://thetriangle.org" target="_blank">The Triangle</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="http://therectangle.org">The Rectangle</a>
+						<a class="nav-link" href="http://therectangle.org" target="_blank">The Rectangle</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Archives</a>
+						<a class="nav-link" href="http://sets.library.drexel.edu/triangle/" target="_blank">Archives</a>
 					</li>
 				</ul>
 			</div>
@@ -108,7 +108,7 @@
 						</div>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Contact</a>
+						<a class="nav-link" href="/contact">Contact</a>
 					</li>
 				</ul>
 			</div>
