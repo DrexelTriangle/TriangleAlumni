@@ -148,27 +148,7 @@ require get_template_directory() . '/inc/buddypress-config.php';
 // Custom comment callback
 require get_template_directory() . '/inc/comment.php';
 
+// Custom login form
+require get_template_directory() . '/inc/login.php';
 
-
-
-// NON WORKING CODE FROM STACK OVERFLOW NEED TO FIX
-// Here we change the PHP class name to be used to handle Text Box fields.
-/*function alumni_bp_xprofile_get_field_types($fields)
-{
-    $fields['textbox'] = 'Alumni_BP_XProfile_Field_Type_Textbox';
-    return $fields;
-}
-add_filter('bp_xprofile_get_field_types', 'alumni_bp_xprofile_get_field_types');
-
-// Here we load the PHP class file to be used to handle Text Box fields.
-function alumni_bp_core_components_included()
-{
-	echo 'debug1';	
-    if (class_exists('BP_XProfile_Field_Type_Textbox'))
-	{
-		echo 'debug2';
-        require_once get_template_directory() . '/inc/xprofile_field_type_textbox.php';
-    }
-}
-add_action('bp_core_components_included', 'alumni_bp_core_components_included');*/
-// NON WORKING CODE FROM STACK OVERFLOW NEED TO FIX
+?>

@@ -1,0 +1,51 @@
+body.login
+{
+	background: url(images/backgrounds/login_bg.jpg);
+	background-size: 150%;
+	background-size: cover;
+	background-position: 50%;
+}
+
+#login
+{
+	padding: 6% 0 0;
+}
+
+.login h1
+{
+	padding-bottom: 2em;
+}
+
+.login h1 a
+{
+	height: 120px;
+	width: 120px;
+	margin: 0 auto;
+	background-image: url(images/tri-icon.png);
+	background-size: 120px 120px;
+}
+
+.login form
+{
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	margin-top: 0;
+	padding-bottom: 32px;
+}
+
+.login p#nav, .login p#backtoblog
+{
+	margin: 0;
+	background: #FFF;
+}
+
+.login p#nav
+{
+	padding-bottom: 8px;
+}
+
+.login p#backtoblog
+{
+	padding-bottom: 24px;
+}

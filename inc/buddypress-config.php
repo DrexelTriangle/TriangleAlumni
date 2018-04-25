@@ -7,6 +7,7 @@
  * @package Alumni
  */
 
+// Define BuddyPress avatar image sizes
 define ( 'BP_AVATAR_THUMB_WIDTH', 100 );
 define ( 'BP_AVATAR_THUMB_HEIGHT', 100 );
 define ( 'BP_AVATAR_FULL_WIDTH', 150 );

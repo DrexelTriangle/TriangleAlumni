@@ -16,4 +16,17 @@
 	{
 		color: red;
 	}
+	
+	.description
+	{
+		color: grey;
+		font-size: 14px;
+		font-style: italic;
+	}
+	
+	// Work-around for hiding default labels on BuddyPress registration page
+	legend
+	{
+		display: none;
+	}
 }

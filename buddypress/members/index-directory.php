@@ -84,8 +84,8 @@ get_header(); ?>
 					*/
 				
 					$positions = bp_get_member_profile_data('field=Positions Held');
-					$yearJoined = date('Y', strtotime(bp_get_member_profile_data('field=Year Joined The Triangle')));
-					$yearLeft = date('Y', strtotime(bp_get_member_profile_data('field=Year Left The Triangle')));
+					$yearJoined = bp_get_member_profile_data('field=Year Joined The Triangle');
+					$yearLeft = bp_get_member_profile_data('field=Year Left The Triangle');
 				?>
 				
 				<div><span><?php echo $positions ?> from <?php echo $yearJoined ?> to <?php echo $yearLeft ?></span></div>
