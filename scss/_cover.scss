@@ -26,21 +26,25 @@
 
 .cover-quarter
 {
-	height: 25vh;
+	height: 20vh;
 }
 
 .cover-overlay
 {
 	align-items: center;
 	display: flex;
+	flex-direction: column;
+	height: 100%;
+	justify-content: center;
 }
 
 .cover-heading
 {
 	animation: fadeInUp 1s;
+	animation-delay: 0.5s;
 	animation-fill-mode: both;
 	color: white;
-	display: inline-block;
+	font-family: $triangle-font-main;
 	font-size: 4.50rem;
 	font-weight: 700;
 	line-height: 5rem;
@@ -51,8 +55,10 @@
 	
 .cover-caption
 {
+	animation: fadeInUp 1s;
+	animation-delay: 0.5s;
+	animation-fill-mode: both;
 	color: white;
-	display: inline-block;
 	font-size: 18px;
 	text-align: center;
 	width: 100%;

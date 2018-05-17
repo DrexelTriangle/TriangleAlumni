@@ -15,27 +15,41 @@
 get_header(); ?>
 
 <div class="image-background">
-	<div class="image-fullpage" style="background-image: url(<?php echo get_template_directory_uri() . '/images/covers/cover-home.png'; ?>)">
-		<div class="image-overlay">
+	<div class="cover cover-full" style="background-image: url(<?php echo get_template_directory_uri() . '/images/covers/cover-home.jpg'; ?>)">
+		<div class="cover-overlay">
 			<div class="container">
-				<h1 class="title">Welcome Back.</h1>
-				<p class="caption">
+				<h1 class="cover-heading">Welcome Back.</h1>
+				<p class="cover-caption">
 					<span>Over 90 years of history and hundreds of alumni to rediscover.</span>
 					<span>See how you can get involved.</span>
 				</p>
+				
 				<div class="clearfix"></div>
-				<p class="caption">
+				
+				<p class="cover-caption">
 					<span><a class="btn btn-primary" href="/join">JOIN THE ALUMNI NETWORK</a></span>
 				</p>
 			</div>
-		</div>
-		
-		<div class="image-card-container">
-			<a href="#" class="image-card" style="background-image: url(<?php echo get_template_directory_uri() . '/images/cards/card1.jpg'; ?>)"></a>
 			
-			<a href="#" class="image-card" style="background-image: url(<?php echo get_template_directory_uri() . '/images/cards/card2.jpg'; ?>)"></a>
-			
-			<a href="#" class="image-card" style="background-image: url(<?php echo get_template_directory_uri() . '/images/cards/card3.jpg'; ?>)"></a>
+			<div class="home-cards-container">
+				<a href="/about" class="home-card" style="background-image: url(<?php echo get_template_directory_uri() . '/images/cards/card1.jpg'; ?>)">
+					<div class="card-contents">
+						<h1 class="caption">About</h1>
+					</div>
+				</a>
+				
+				<a href="/news" class="home-card" style="background-image: url(<?php echo get_template_directory_uri() . '/images/cards/card2.jpg'; ?>)">
+					<div class="card-contents">
+						<h1 class="caption">News</h1>
+					</div>
+				</a>
+				
+				<a href="/volunteer" class="home-card" style="background-image: url(<?php echo get_template_directory_uri() . '/images/cards/card3.jpg'; ?>)">
+					<div class="card-contents">
+						<h1 class="caption">Volunteer</h1>
+					</div>
+				</a>
+			</div>
 		</div>
 	</div>
 </div>

@@ -1,0 +1,58 @@
+.home-cards-container
+{
+	animation: fadeInUp 1s;
+	animation-delay: 1s;
+	animation-fill-mode: both;
+	padding-top: 125px;
+	padding-bottom: 75px;
+	text-align: center;
+	width: 100%;
+	
+	a:hover
+	{
+		text-decoration: none;
+	}
+	
+	.home-card
+	{
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		cursor: pointer;
+		display: inline-block;
+		height: 200px;
+		margin-left: 25px;
+		margin-right: 25px;
+		max-width: 346px;
+		transition: .2s ease all;
+		width: 365px;
+	
+		&:hover
+		{
+			transform: scale(1.10);
+			transition: .2s ease all;
+		}
+		
+		&:focus
+		{
+			outline: none;
+		}
+		
+		.card-contents
+		{
+			align-itmes: center;
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+			justify-content: center;
+			
+			.caption
+			{
+				color: white;
+				font-family: $triangle-font-main;
+				height: auto;
+				margin: 0px;
+			}
+		}
+	}
+}

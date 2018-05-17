@@ -11,7 +11,7 @@
 
 get_header(); ?>
 
-<div class="cover cover-quarter" style="background-image: url(<?php echo get_template_directory_uri() . '/images/covers/events.jpg'; ?>)">
+<div class="cover cover-quarter" style="background-image: url(<?php echo get_template_directory_uri() . '/images/covers/members.jpg'; ?>)">
 	<div class="cover-overlay">
 		<h1 class="cover-heading">Member Directory</h1>
 	</div>
