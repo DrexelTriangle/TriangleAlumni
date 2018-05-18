@@ -14,7 +14,7 @@
  
 		<?php do_action('template_notices'); ?>
 
-		<p>If you're interested in joining The Triangle Alumni Association, fill out the form below and we\'ll process your request as soon as possible. 
+		<p>If you're interested in joining The Triangle Alumni Association, fill out the form below and we'll process your request as soon as possible. 
 			You will recieve an email from us once your information has been verified.
 		</p>
 

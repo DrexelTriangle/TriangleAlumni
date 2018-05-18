@@ -120,19 +120,19 @@ function alumni_scripts()
 {
 	// jQuery
 	wp_deregister_script('jquery');
-	wp_register_script('jquery', "https" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js", false, null);
+	wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js", false, null);
 	wp_enqueue_script('jquery');
 	
 	// Bootstrap JS
 	wp_deregister_script('bootstrap-js');
-	wp_register_script('bootstrap-js', "https" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js", false, null);
+	wp_register_script('bootstrap-js', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js", false, null);
 	wp_enqueue_script('bootstrap-js');
 	
 	// Bootstrap stylesheet
-	wp_enqueue_style('bootstrap-style', "https" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css", false, null);
+	wp_enqueue_style('bootstrap-style', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css", false, null);
 	
 	// Font-awesome stylesheet
-	//wp_enqueue_style('fa-style', "https" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", false, null);
+	//wp_enqueue_style('fa-style', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", false, null);
 	
 	//Custom stylesheet
 	wp_enqueue_style('alumni-style', get_stylesheet_uri());
