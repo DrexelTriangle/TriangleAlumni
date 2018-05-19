@@ -9,14 +9,12 @@
  
 ?>
 
-<div class="cover cover-quarter" style="background-image: url(<?php echo get_the_post_thumbnail_url($post, 'feature-jumbotron'); ?>)">
-	<div class="cover-overlay">
-		<?php the_title('<h1 class="cover-heading">', '</h1>'); ?>
-	</div>
-</div>
+<div class="cover cover-quarter" style="background-image: url(<?php echo get_the_post_thumbnail_url($post, 'feature-jumbotron'); ?>)"></div>
 
 <div id="page-<?php the_ID(); ?>" class="single-container">
 	<div class="page-container">
+		<?php the_title('<h1 class="page-heading">', '</h1>'); ?>
+	
 		<?php the_content(); ?>
 	</div>
 </div>
