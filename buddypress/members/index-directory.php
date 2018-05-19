@@ -11,13 +11,10 @@
 
 get_header(); ?>
 
-<div class="cover cover-quarter" style="background-image: url(<?php echo get_template_directory_uri() . '/images/covers/members.jpg'; ?>)">
-	<div class="cover-overlay">
-		<h1 class="cover-heading">Member Directory</h1>
-	</div>
-</div>
+<div class="cover cover-quarter" style="background-image: url(<?php echo get_template_directory_uri() . '/images/covers/members.jpg'; ?>)"></div>
 
 <div class="generic-container">
+<h1 class="page-heading">Member Directory</h1>
 
 <div class="row">
 	<div class="col-lg-6 col-xs-12">
