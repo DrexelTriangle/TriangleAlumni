@@ -97,6 +97,7 @@
 						<div class="dropdown-menu" aria-labelledby="dropdown-members">
 							<a href="/members" class="dropdown-item">Member Directory</a>
 							<a href="/events" class="dropdown-item">Events Calendar</a>
+							<a href="/forums" class="dropdown-item">Forums</a>
 							<a href="<?php echo bp_loggedin_user_domain() . 'profile/edit/'; ?>" class="dropdown-item">Manage Account</a>
 						</div>
 					</li>
@@ -105,6 +106,7 @@
 						<div class="dropdown-menu" aria-labelledby="dropdown-members">
 							<a href="/join" class="dropdown-item">Join the Association</a>
 							<a href="/volunteer" class="dropdown-item">Volunteer</a>
+							<a href="https://secureia.drexel.edu/s/1683/form/16/form.aspx?sid=1683&gid=2&pgid=477&cid=1122&dids=343&bledit=1" class="dropdown-item">Donate</a>
 						</div>
 					</li>
 					<li class="nav-item">
